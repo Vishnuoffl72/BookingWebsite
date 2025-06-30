@@ -1,0 +1,23 @@
+body{
+    background-image: url("../assets//backgroundImage.png");
+    background-size: 1900px;
+}
+
+.home-bg{
+    display: grid;
+    gap: 30px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.explore-btn{
+    padding: 10px 30px;
+    background-color: #F84565;
+    border-radius: 20px;
+}
+
+.title-text{
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 500;
+}

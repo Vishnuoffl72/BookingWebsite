@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { Toaster} from 'react-hot-toast'
+import Theaters from './pages/Theaters'
+import Releases from './pages/Releases'
+import Movies from './pages/Movies'
 
-function App() {
+const App = () => {
+
+  const isAdminLogin = useLocation().pathname.startsWith('/admin')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    
+      <Toaster/>
+      {!isAdminLogin && <Navbar/>}
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/movies' element={<Movies/>} />
+        <Route path='/theaters' element={<Theaters/>} />
+        <Route path='/releases' element={<Releases/>} />
+      </Routes>
+      {!isAdminLogin && <Footer/>}
+    </>
+    
+  )
 }
 
-export default App;
+export default App

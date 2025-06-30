@@ -1,0 +1,27 @@
+.navbar-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.pages-class{
+    display: flex;
+    gap: 30px;
+    background-color: #1a2232;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.buttons-class{
+    display: flex;
+    gap: 30px;
+}
+
+.login-button{
+    gap: 50px;
+    padding: 10px 30px;
+    background-color: #F84565;
+    border-radius: 20px;
+}
